@@ -1,0 +1,15 @@
+<div *ngIf="currentNews$">
+  <h2 class="title">{{currentNews$.title}}</h2>
+  <div class="info">
+    <app-news-label label="Agency" [content]="currentNews$.source.name"></app-news-label>
+    <app-news-label label="Author" [content]="currentNews$.author"></app-news-label>
+    <app-news-label label="Published at" [content]="currentNews$.publishedAt | date:'medium'"></app-news-label>
+    <app-news-label label="Source" [content]="currentNews$.url" [isLink]="true"></app-news-label>
+    <p>{{currentNews$.description}}</p>
+  </div>
+  <hr/>
+  <div class="content">
+    <img *ngIf="currentNews$.urlToImage !== null" [src]="currentNews$.urlToImage" [alt]="currentNews$.title">
+    <p *ngIf="currentNews$.content" class="content-text">{{currentNews$.content}}</p>
+  </div>
+<div>

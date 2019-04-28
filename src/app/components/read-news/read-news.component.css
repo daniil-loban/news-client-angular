@@ -1,0 +1,26 @@
+.title, .info {
+  text-align: center;
+}
+
+.image {
+  flex: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.content-text {
+  flex: 1;
+  min-width: 200px;
+  padding: 5px;
+  margin: 0px;
+}
+
+img {
+  height: 300px;
+}

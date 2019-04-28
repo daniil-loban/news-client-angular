@@ -1,0 +1,17 @@
+.header-title {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: .3rem;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+
+a[ng-reflect-router-link] {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a[ng-reflect-router-link]:hover {
+  text-decoration:underline;
+}

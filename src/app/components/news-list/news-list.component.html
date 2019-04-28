@@ -1,0 +1,15 @@
+<div class="search-panel">
+  <label for="seachField">Search:</label>
+  <input id="seachField" placeholder="type something here" [formControl]="searchControl">
+</div>
+<ul class="news-list">
+  <li *ngFor="let item of news | filter : searchValue; let id=index;"
+    appFreshNews
+    [publishedAt]="item.publishedAt"
+    [routerLink]="['/post', item.title]">
+    <app-news-item [header]="item.title" [publishedAt]="item.publishedAt"></app-news-item>
+  </li>
+</ul>
+<footer class="api-reminder">
+  <a href="https://newsapi.org">https://newsapi.org</a>
+</footer>

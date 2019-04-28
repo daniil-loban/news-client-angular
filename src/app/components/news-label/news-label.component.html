@@ -1,0 +1,9 @@
+<div class="news-label" *ngIf="content">
+  <div *ngIf="isLink===true; else textTemplate">
+    <a [href]="content" target="_blank">{{label}}</a>
+  </div>
+</div>
+
+<ng-template #textTemplate>
+  <span *ngIf="content">{{label}}:&nbsp;</span><span class="content">{{content}}</span>
+</ng-template>
